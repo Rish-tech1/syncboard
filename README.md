@@ -116,8 +116,8 @@ syncboard/
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/Rish-tech1/drw.git
-cd drw
+git clone https://github.com/Rish-tech1/syncboard
+cd syncboard
 ```
 
 2. **Install dependencies**
@@ -163,8 +163,8 @@ npm run start:websocket  # WebSocket server (port 8080)
 
 1. **Clone and configure**
 ```bash
-git clone https://github.com/Rish-tech1/drw.git
-cd drw
+git clone https://github.com/Rish-tech1/syncboard
+cd syncboard
 cp .env.example .env
 ```
 
@@ -232,9 +232,7 @@ JWT_SECRET="your-jwt-secret"
 NEXTAUTH_SECRET="your-nextauth-secret"
 NEXTAUTH_URL="http://localhost:3000"
 
-# Google OAuth
-GOOGLE_CLIENT_ID="your-google-client-id"
-GOOGLE_CLIENT_SECRET="your-google-client-secret"
+
 
 # Gemini API Key (needed for AI shape generation feature)
 GEMINI_API_KEY="your-gemini-api-key"
@@ -290,7 +288,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 - 📧 **Email**: [jainrishabh8153@gmail.com](mailto:jainrishabh8153@gmail.com)
-- 🐛 **Issues**: [GitHub Issues](https://github.com/Rish-tech1/drw/issues)
 
 ---
 

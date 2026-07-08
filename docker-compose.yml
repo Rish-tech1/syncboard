@@ -9,7 +9,7 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - DATABASE_URL=postgresql://postgres:postgres@localhost:5432/mydb
+      - DATABASE_URL=postgresql://neondb_owner:npg_SF6fRoegAp1L@ep-autumn-firefly-atdyhiau-pooler.c-9.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require
     depends_on:
       - postgres
   
