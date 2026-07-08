@@ -1,0 +1,62 @@
+import React from "react";
+
+interface LogoProps {
+  className?: string;
+  size?: number;
+}
+
+export default function Logo({ className = "", size = 32 }: LogoProps) {
+  return (
+    <svg
+      className={className}
+      width={size}
+      height={size}
+      viewBox="0 0 32 32"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        {/* Premium Space Gradients */}
+        <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#c084fc" /> {/* vibrant purple */}
+          <stop offset="50%" stopColor="#6366f1" /> {/* sleek indigo */}
+          <stop offset="100%" stopColor="#38bdf8" /> {/* neon cyan */}
+        </linearGradient>
+        <linearGradient id="accent-grad" x1="100%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#f472b6" /> {/* pink */}
+          <stop offset="100%" stopColor="#6366f1" />
+        </linearGradient>
+        <filter id="logo-glow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="2" stdDeviation="3" floodColor="#6366f1" floodOpacity="0.5" />
+        </filter>
+      </defs>
+
+      {/* Futuristic Orbit/Connection paths representing collaborative board & sync */}
+      <path
+        d="M26 12C28.2 14.5 28.2 17.5 26 20C23 23.5 19 25 15 25C10 25 6.5 22.5 5 18C3.5 13.5 6 8.5 11 7C16 5.5 21 7.5 23.5 11"
+        stroke="url(#logo-grad)"
+        strokeWidth="3"
+        strokeLinecap="round"
+        filter="url(#logo-glow)"
+      />
+      <path
+        d="M6 20C3.8 17.5 3.8 14.5 6 12C9 8.5 13 7 17 7C22 7 25.5 9.5 27 14C28.5 18.5 26 23.5 21 25C16 26.5 11 24.5 8.5 21"
+        stroke="url(#accent-grad)"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeDasharray="4 3"
+        opacity="0.8"
+      />
+
+      {/* Syncing nodes */}
+      <circle cx="11" cy="7" r="3.5" fill="#c084fc" filter="url(#logo-glow)" />
+      <circle cx="11" cy="7" r="1.5" fill="#ffffff" />
+      
+      <circle cx="21" cy="25" r="3.5" fill="#38bdf8" filter="url(#logo-glow)" />
+      <circle cx="21" cy="25" r="1.5" fill="#ffffff" />
+
+      {/* Active central hub */}
+      <circle cx="16" cy="16" r="2.5" fill="#ffffff" filter="url(#logo-glow)" />
+    </svg>
+  );
+}

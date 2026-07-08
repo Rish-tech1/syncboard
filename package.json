@@ -1,0 +1,39 @@
+{
+  "name": "exceli-draw",
+  "private": true,
+  "scripts": {
+    "start": "turbo dev",
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "db:generate": "npx -w @repo/db prisma generate",
+    "start:web": "npx -w @exceli-draw/web dev",
+    "start:backend": "npx -w @exceli-draw/http-backend dev",
+    "start:websocket": "npx -w @exceli-draw/ws-backend dev",
+    "postinstall": "turbo run build --filter=@repo/db",
+    "debug:vercel": "ls -la node_modules/@repo/db && prisma -v"
+  },
+  "exports": {
+    "backend-common": "./packages/backend-common",
+    "common": "./packages/common",
+    "db": "./packages/db",
+    "frontend": "./packages/frontend"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "turbo": "^2.3.3",
+    "typescript": "5.5.4"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "npm@10.2.4",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "dependencies": {
+    "next-auth": "^4.24.14"
+  }
+}
